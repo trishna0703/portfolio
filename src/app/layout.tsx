@@ -1,15 +1,4 @@
-import type { Metadata } from "next";
-import "./globals.css";
-
-export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "A portfolio built with Next.js",
-};
-
-export default function RootLayout({ children }: LayoutProps<"/">) {
-  return (
-    <html lang="en" className="h-full antialiased">
-      <body className="min-h-full flex flex-col">{children}</body>
-    </html>
-  );
-}
+﻿import type { Metadata } from 'next';
+import './globals.css';
+export const metadata:Metadata={metadataBase:new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),title:'Trishna Kashyap — Full-Stack Engineer & AI Product Builder',description:'Thoughtful products, from interface to intelligence. Selected engineering work and AI explorations by Bengaluru-based full-stack engineer Trishna Kashyap.',openGraph:{title:'Trishna Kashyap — Interface to Intelligence',description:'Full-stack engineering, thoughtful product experiences, and ongoing AI explorations.',type:'website',locale:'en_IN'},twitter:{card:'summary_large_image',title:'Trishna Kashyap — Interface to Intelligence'}};
+export default function RootLayout({children}:LayoutProps<'/'>){return <html lang="en"><body><a className="skip-link" href="#main">Skip to content</a>{children}</body></html>}
